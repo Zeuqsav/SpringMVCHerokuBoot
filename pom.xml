@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.levelup</groupId>
-	<artifactId>003-getting-started-with-spring-boot</artifactId>
+	<artifactId>SpringMVChiberHeroku</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<url></url>
 
-	<name>003-getting-started-with-spring-boot</name>
+	<name>SpringMVChiberHeroku</name>
 	<description>Getting started with spring boot</description>
 	
 	<packaging>war</packaging>
