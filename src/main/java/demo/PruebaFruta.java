@@ -13,7 +13,8 @@ public class PruebaFruta {
 	public PruebaFruta(){
 		try{
 		Class.forName("org.postgresql.Driver");
-		Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Pruebas","postgres","rrffdgdg");
+		// local Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Pruebas","postgres","rrffdgdg");
+		Connection c = DriverManager.getConnection("jdbc:postgresql://ec2-54-197-224-173.compute-1.amazonaws.com:5432/d6a2bta8rjrict","ldtflhszyrbjzv","B__VbV9uu-fnetOJBt7CT6Zi_f");
 		ResultSet res = c.createStatement().executeQuery("Select id,nombre,descripcion From ejemplo");
 		while (res.next()){
 			frutasVarias.add(res.getString("id"));
@@ -27,8 +28,7 @@ public class PruebaFruta {
         }catch (ClassNotFoundException  e) {
             	e.printStackTrace();
         }
-
-		
+	
 	}
 	
 	public List<String> getFrutasVarias(){
