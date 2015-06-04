@@ -1,10 +1,15 @@
 package demo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Ubicacion {
 	private String id;
     private String coorx;
     private String coory;
     private String otro;
+    
+
 	public String getId() {
 		return id;
 	}

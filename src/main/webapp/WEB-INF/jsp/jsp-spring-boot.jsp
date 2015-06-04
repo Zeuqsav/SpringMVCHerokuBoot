@@ -27,9 +27,6 @@
 
 </c:forEach>
 
-
-
-
 <% 
 pageContext.setAttribute("frutasBean", new PruebaFruta());
 %>
@@ -38,6 +35,7 @@ pageContext.setAttribute("frutasBean", new PruebaFruta());
 ${MV}
 </p>
 </c:forEach>
+<h1>FIN</h1>
  
 </body>
 </html>

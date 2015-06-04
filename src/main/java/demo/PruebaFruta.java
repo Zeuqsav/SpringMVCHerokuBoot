@@ -13,20 +13,21 @@ public class PruebaFruta {
 	public PruebaFruta(){
 		try{
 		Class.forName("org.postgresql.Driver");
-		// local Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Pruebas","postgres","rrffdgdg");
+		//Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Pruebas","postgres","rrffdgdg");
 		Connection c = DriverManager.getConnection("jdbc:postgresql://ec2-54-197-224-173.compute-1.amazonaws.com:5432/d6a2bta8rjrict","ldtflhszyrbjzv","B__VbV9uu-fnetOJBt7CT6Zi_f");
-		ResultSet res = c.createStatement().executeQuery("Select id,nombre,descripcion From ejemplo");
-		while (res.next()){
+		ResultSet res = c.createStatement().executeQuery("select ('https://www.google.cl/maps/search/' || coory ||',' || coorx ||'     ->' || otro ) as id from ubicacion where coory <> 'cooy';");
+		while (res.next())
+			{
 			frutasVarias.add(res.getString("id"));
-		}
+			}
 		frutasVarias.add("Uva");
-		frutasVarias.add("Pera");
-		frutasVarias.add("Manzana");
-		frutasVarias.add("Naranja");
+
 		}catch (SQLException e) {
 		        e.printStackTrace();
+		        frutasVarias.add(e.toString());
         }catch (ClassNotFoundException  e) {
             	e.printStackTrace();
+            	frutasVarias.add(e.toString());
         }
 	
 	}
