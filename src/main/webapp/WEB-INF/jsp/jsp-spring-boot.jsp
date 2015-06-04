@@ -11,21 +11,8 @@
 </head>
 <body>
 
-<h1>Hello Amorsota</h1>
-<c:forEach var="i" begin="1" end="5" step="1" >
-<c:out value="${i}" /><br/>
+<h1>Hello Localizador</h1>
 
-<c:catch var= "errorMsg">
-	<c:if test="${i <= 2}">
-		<c:out value ="menor igual a 2"/>
-	</c:if>
-	<c:if test="${i > 2}">
-		<c:out value ="mayor igual a 2"/>
-	</c:if>
-</c:catch>
-<p>${errorMsg} </p>
-
-</c:forEach>
 
 <% 
 pageContext.setAttribute("frutasBean", new PruebaFruta());

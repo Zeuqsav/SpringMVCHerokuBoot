@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,11 +50,16 @@ public class HelloController {
     public ResponseEntity<Ubicacion> update (@RequestBody Ubicacion ubicacion) {
     	try{
     	if (ubicacion != null){
+    		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    		Date date2 = new Date();
+
+    		
+
     		
     		Class.forName("org.postgresql.Driver");
     		//Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Pruebas","postgres","rrffdgdg");
     		Connection c = DriverManager.getConnection("jdbc:postgresql://ec2-54-197-224-173.compute-1.amazonaws.com:5432/d6a2bta8rjrict","ldtflhszyrbjzv","B__VbV9uu-fnetOJBt7CT6Zi_f");
-    		ResultSet res = c.createStatement().executeQuery("insert into ubicacion (id,coorx,coory,otro) values ('" + ubicacion.getId() +"','" + ubicacion.getCoorx() +"','" + ubicacion.getCoory() +"','" + ubicacion.getOtro() +"')");
+    		ResultSet res = c.createStatement().executeQuery("insert into ubicacion (id,coorx,coory,otro) values ('" + ubicacion.getId() +"','" + ubicacion.getCoorx() +"','" + ubicacion.getCoory() +"','" + ubicacion.getOtro() +"   " + date2.toString() + "')");
    		    		
     		ubicacion.setCoory("logrado");
     	}
