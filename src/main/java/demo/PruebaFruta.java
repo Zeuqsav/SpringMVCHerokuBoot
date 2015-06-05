@@ -20,7 +20,7 @@ public class PruebaFruta {
 			{
 			frutasVarias.add(res.getString("id"));
 			}
-		frutasVarias.add("Uva");
+	//	frutasVarias.add("Uva");
 
 		}catch (SQLException e) {
 		        e.printStackTrace();
