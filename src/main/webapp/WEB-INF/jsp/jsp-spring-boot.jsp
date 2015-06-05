@@ -44,7 +44,9 @@ pageContext.setAttribute("frutasBean2", new PruebaFruta());
 %>
         
   <script type="text/javascript">
-  
+  var delay=5000; //1 seconds
+
+  setTimeout(function(){
   
   var locations = 
 		[
@@ -82,6 +84,7 @@ pageContext.setAttribute("frutasBean2", new PruebaFruta());
         }
       })(marker, i));
     }
+  }, delay); 
   </script>
 
 <h1>FIN</h1>
