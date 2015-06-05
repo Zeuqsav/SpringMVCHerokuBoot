@@ -44,7 +44,7 @@ pageContext.setAttribute("frutasBean2", new PruebaFruta());
 %>
         
   <script type="text/javascript">
-  var delay=5000; //1 seconds
+  var delay=50000; //1 seconds
 
   setTimeout(function(){
   
