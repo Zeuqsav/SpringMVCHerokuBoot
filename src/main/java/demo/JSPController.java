@@ -12,5 +12,5 @@ public class JSPController {
 	    	
 	        return "jsp-spring-boot";
 	  }
-	
+	  
 }
