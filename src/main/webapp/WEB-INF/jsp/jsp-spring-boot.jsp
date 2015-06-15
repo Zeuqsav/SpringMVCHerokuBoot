@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="http://maps.google.com/maps/api/js?sensor=false" 
+<script src="//maps.google.com/maps/api/js?sensor=false" 
           type="text/javascript"></script>
 </head>
 <body>
@@ -27,24 +27,18 @@ ${MV}
 <c:set var="stringB" value="${fn:split(string2,',')}" />
 <c:set var="stringC" value="${fn:split(string3[1],' ')}" />
 
-
-
 </p>
-
-
-
 
 </c:forEach>
 
 <div id="map" style="width: 500px; height: 400px;"></div>
-
   
 <% 
 pageContext.setAttribute("frutasBean2", new PruebaFruta());
 %>
         
   <script type="text/javascript">
-  var delay=50000; //1 seconds
+  var delay=100; //1 seconds
 
   setTimeout(function(){
   
@@ -54,7 +48,6 @@ pageContext.setAttribute("frutasBean2", new PruebaFruta());
 		<c:set var="string2" value="${fn:substring(MR, 34, 100)}" />
 		<c:set var="string3" value="${fn:split(string2,',')}" />
 		<c:set var="string4" value="${fn:split(string3[1],' ')}" />
-		
 			['<c:out value="${string4[1]}"/>',<c:out value="${string3[0]}"/>,<c:out value="${string4[0]}"/>,<c:out value="0"/>],
 		</c:forEach>
 		];   
